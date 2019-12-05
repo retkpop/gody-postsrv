@@ -1,0 +1,52 @@
+{
+    "name": "Medias",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image"
+        },
+        {
+            "fieldName": "fileExtension",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "TYPEMEDIA",
+            "fieldValues": "THUMBNAIL,GALLERY"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "posts",
+            "otherEntityRelationshipName": "pmedia",
+            "relationshipName": "mpost",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "categories",
+            "otherEntityRelationshipName": "media",
+            "relationshipName": "category",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "posts",
+            "otherEntityRelationshipName": "media",
+            "relationshipName": "post",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191205040615",
+    "entityTableName": "medias",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "PostService",
+    "applications": "*",
+    "microserviceName": "PostService"
+}

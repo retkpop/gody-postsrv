@@ -1,0 +1,45 @@
+{
+    "name": "Translates",
+    "fields": [
+        {
+            "fieldName": "content",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lang",
+            "fieldType": "LANG",
+            "fieldValues": "EN,VI"
+        },
+        {
+            "fieldName": "typeLang",
+            "fieldType": "TYPELANG",
+            "fieldValues": "TITLE,SLUG,EXCERPT,DESCRIPTION,TITLE_SEO"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "posts",
+            "otherEntityRelationshipName": "translate",
+            "relationshipName": "tpost",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "categories",
+            "otherEntityRelationshipName": "translate",
+            "relationshipName": "category",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191205040617",
+    "entityTableName": "translates",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "PostService",
+    "applications": "*",
+    "microserviceName": "PostService"
+}

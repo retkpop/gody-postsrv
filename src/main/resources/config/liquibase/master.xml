@@ -14,6 +14,38 @@
     <property name="uuidType" value="varchar(36)" dbms="h2, mysql, mariadb"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205034129_added_entity_Posts.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205034130_added_entity_Medias.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205034131_added_entity_Categories.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205034132_added_entity_Translates.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205034310_added_entity_Posts.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205034311_added_entity_Medias.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205034312_added_entity_Categories.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205034313_added_entity_Translates.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040048_added_entity_Posts.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040049_added_entity_Medias.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040050_added_entity_Categories.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040051_added_entity_Translates.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040614_added_entity_Posts.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040615_added_entity_Medias.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040616_added_entity_Categories.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040617_added_entity_Translates.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20191205034129_added_entity_constraints_Posts.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205034130_added_entity_constraints_Medias.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205034131_added_entity_constraints_Categories.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205034132_added_entity_constraints_Translates.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205034310_added_entity_constraints_Posts.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205034311_added_entity_constraints_Medias.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205034312_added_entity_constraints_Categories.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205034313_added_entity_constraints_Translates.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040048_added_entity_constraints_Posts.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040049_added_entity_constraints_Medias.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040050_added_entity_constraints_Categories.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040051_added_entity_constraints_Translates.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040614_added_entity_constraints_Posts.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040615_added_entity_constraints_Medias.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040616_added_entity_constraints_Categories.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191205040617_added_entity_constraints_Translates.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

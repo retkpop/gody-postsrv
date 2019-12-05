@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Posts.
+    -->
+    <changeSet id="20191205040048-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="op_media_id"
+                                 baseTableName="posts"
+                                 constraintName="fk_posts_op_media_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="medias"/>
+
+        <addForeignKeyConstraint baseColumnNames="posts_id"
+                                 baseTableName="posts_p_category"
+                                 constraintName="fk_posts_p_category_posts_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="posts"/>
+
+        <addForeignKeyConstraint baseColumnNames="p_category_id"
+                                 baseTableName="posts_p_category"
+                                 constraintName="fk_posts_p_category_p_category_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="categories"/>
+        
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,64 @@
+{
+    "name": "Categories",
+    "fields": [
+        {
+            "fieldName": "createdBy",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "lastUpdate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "updateBy",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "STATUS",
+            "fieldValues": "PUBLIC,DELETE,LOCKED,PENDING"
+        },
+        {
+            "fieldName": "parent",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "medias",
+            "otherEntityRelationshipName": "category",
+            "relationshipName": "media",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "translates",
+            "otherEntityRelationshipName": "category",
+            "relationshipName": "translate"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "posts",
+            "otherEntityRelationshipName": "category",
+            "relationshipName": "cpost",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191205040616",
+    "entityTableName": "categories",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "PostService",
+    "applications": "*",
+    "microserviceName": "PostService"
+}

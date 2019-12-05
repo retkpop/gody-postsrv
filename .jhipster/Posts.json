@@ -1,0 +1,75 @@
+{
+    "name": "Posts",
+    "fields": [
+        {
+            "fieldName": "createdBy",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "lastUpdate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "updateBy",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "views",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "STATUS",
+            "fieldValues": "PUBLIC,DELETE,LOCKED,PENDING"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "TYPE",
+            "fieldValues": "POST,PAGE"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "medias",
+            "otherEntityRelationshipName": "mpost",
+            "relationshipName": "pmedia",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "translates",
+            "otherEntityRelationshipName": "tpost",
+            "relationshipName": "translate"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "medias",
+            "otherEntityRelationshipName": "post",
+            "relationshipName": "media"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "categories",
+            "otherEntityRelationshipName": "cpost",
+            "relationshipName": "category",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191205040614",
+    "entityTableName": "posts",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "PostService",
+    "applications": "*",
+    "microserviceName": "PostService"
+}
