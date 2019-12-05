@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.tk.service.post",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.1.2",
+    "applicationType": "microservice",
+    "baseName": "PostService",
+    "packageName": "com.tk.service.post",
+    "packageFolder": "com/tk/service/post",
+    "serverPort": "9091",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mariadb",
+    "prodDatabaseType": "mariadb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MzcwNWNmNDc3NzM2NDM2ZDY1Yjc2OWQwZjg3NDlmNWE0MzEzYTI1YzQxZmE4YTFlYzAyMGI2MDI5MDgyNjBjNjJiY2E5YjAyYzQ0ZDY2MTQzY2ZmOGM2NzdjZThkMDY3NjgyYzk2ZDJjZmE5N2FkOWQxZDZlMjYxMTZiMjNjMTA=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "vi"
+    ],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

@@ -1,0 +1,61 @@
+entity Posts {
+	createdBy	Long
+    createdDate	ZonedDateTime
+	lastUpdate	ZonedDateTime
+    updateBy	Long
+    views	Integer
+    status	STATUS
+    type	TYPE
+}
+entity Medias {
+	name ImageBlob
+	fileExtension String
+    type	TYPEMEDIA
+}
+entity Categories {
+	createdBy	Long
+    createdDate	ZonedDateTime
+	lastUpdate	ZonedDateTime
+    updateBy	Long
+    status	STATUS
+    parent	Long
+}
+enum STATUS {
+	PUBLIC, DELETE, LOCKED, PENDING
+}
+enum TYPE {
+	POST, PAGE
+}
+enum TYPEMEDIA {
+	THUMBNAIL, GALLERY
+}
+entity Translates {
+	content	String
+    lang	LANG
+    typeLang	TYPELANG
+}
+enum LANG {
+	EN, VI
+}
+enum TYPELANG {
+	TITLE, SLUG, EXCERPT, DESCRIPTION, TITLE_SEO
+}
+relationship OneToOne {
+	Posts{media} to Medias{post}
+	Categories{media} to Medias{category}
+}
+relationship ManyToMany {
+	Posts{category} to Categories{post}
+}
+relationship OneToMany {
+	Posts{translate} to Translates{post}
+    Posts{media} to Medias{post}
+    Categories{translate} to Translates{category}
+}
+
+// Use Data Transfert Objects (DTO)
+dto Posts, Categories, Medias with mapstruct
+
+paginate Posts with infinite-scroll
+paginate Posts with pagination
+service all with serviceImpl except Categories, Medias
